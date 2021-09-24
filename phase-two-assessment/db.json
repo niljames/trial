@@ -1,0 +1,132 @@
+{
+  "product_details": [
+    {
+      "id": "1",
+      "name": "Milk",
+      "price": "0.86",
+      "price_ext": "/- per Litre",
+      "imageUrl": "https://images.pexels.com/photos/5545921/pexels-photo-5545921.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Milk Basic"
+    },
+    {
+      "id": "2",
+      "name": "Cornflakes Cereals",
+      "price": "3.27",
+      "price_ext": "/-",
+      "imageUrl": "https://images.pexels.com/photos/108291/pexels-photo-108291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Cereals Basic"
+    },
+    {
+      "id": "3",
+      "name": "Tomato",
+      "price": "1.28",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/4022093/pexels-photo-4022093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Vegetables Basic"
+    },
+    {
+      "id": "4",
+      "name": "Chicken",
+      "price": "2.38",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/3688/food-dinner-lunch-chicken.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Meat Basic"
+    },
+    {
+      "id": "5",
+      "name": "Orange",
+      "price": "1.33",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Fruits Basic"
+    },
+    {
+      "id": "6",
+      "name": "Cashew Nuts",
+      "price": "15",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/4663476/pexels-photo-4663476.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "tags": "Nuts"
+    },
+    {
+      "id": "7",
+      "name": "Eggs",
+      "price": "1.48",
+      "price_ext": "/- per packet",
+      "imageUrl": "https://images.pexels.com/photos/2959317/pexels-photo-2959317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Eggs Basic"
+    },
+    {
+      "id": "8",
+      "name": "Bread",
+      "price": "2.5",
+      "price_ext": "/-",
+      "imageUrl": "https://images.pexels.com/photos/960662/pexels-photo-960662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Bread Basic"
+    },
+    {
+      "id": "9",
+      "name": "Almonds",
+      "price": "5.94",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/3997459/pexels-photo-3997459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Nuts"
+    },
+    {
+      "id": "10",
+      "name": "Grapes",
+      "price": "3.14",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Fruits Basic"
+    },
+    {
+      "id": "11",
+      "name": "Carrots",
+      "price": "0.95",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/3650647/pexels-photo-3650647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "tags": "Vegetables Basic"
+    },
+    {
+      "id": "12",
+      "name": "Lamb",
+      "price": "20",
+      "price_ext": "/- per pound",
+      "imageUrl": "https://images.pexels.com/photos/5774154/pexels-photo-5774154.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "tags": "Meat"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "username": "Nileena James",
+      "email": "nileena@gmail.com",
+      "password": "Nileena@123!"
+    },
+    {
+      "id": 3,
+      "username": "Emily Clarke",
+      "email": "emc@gmail.com",
+      "password": "emc_2029"
+    },
+    {
+      "id": 4,
+      "username": "Noelle Camry",
+      "email": "noelle@yahoo.com",
+      "password": "Noelle_25"
+    },
+    {
+      "id": 5,
+      "username": "Lukas Graham",
+      "email": "lukasg@gmail.com",
+      "password": "LukasG1"
+    }
+  ]
+}

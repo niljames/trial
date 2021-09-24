@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light">
+    <div class="container-fluid">
+      <h1 style=" margin-left:35%">Admin Login Portal</h1>
+      <div class="d-flex">
+        <button type="button" (click)="clickAddBtn()" class="btn btn-warning" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Add Account Details</button>
+        <button (click)="back()" class="btn btn btn-success" type="button" style="margin-left: 10px;">Back</button>
+      </div>
+    </div>
+  </nav>
+
+  <table class="table table-hover mt-3" style="color: white; background-color:#ffaa644f;">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of adminData">
+        <td>{{row.id}}</td>
+        <td>{{row.username}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.password}}</td>
+        <td>
+          <button (click)="onEdit(row)" class="btn btn btn-info" type="button" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" style="margin-right:10px;">Edit</button>
+          <button class="btn btn btn-danger" (click)="deleteLogin(row)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Account Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label for="exampleInputId" class="form-label">Name</label>
+              <input type="text" formControlName="username" class="form-control" id="exampleInputId">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPrice" class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="exampleInputPrice">
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+          <button type="button" class="btn btn-primary" *ngIf="showAdd" (click)="AddDetails()">Add</button>
+          <button type="button" class="btn btn-primary" *ngIf="showUpdate" (click)="updateLogin()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

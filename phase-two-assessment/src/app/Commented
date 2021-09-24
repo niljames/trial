@@ -1,0 +1,66 @@
+  /*  clickAddBtn(){
+      this.formValue.reset();
+      this.showAdd=true;
+      this.showUpdate=false;
+    }
+    postLogin(){
+      this.adminLoginObj.id=this.formValue.value.id;
+      this.adminLoginObj.username=this.formValue.value.username;
+      this.adminLoginObj.email=this.formValue.value.email;
+      this.adminLoginObj.password=this.formValue.value.password;
+  
+  
+      this.api.postLogin(this.adminLoginObj).subscribe(res=>{
+        console.log(res);
+      alert("Login Details Added Successfully!");
+      let ref=document.getElementById('cancel');
+      ref?.click();
+      this.formValue.reset();
+      this.getLogin();
+    },
+    err=>{
+      alert("Something went wrong");
+    })
+    }
+
+    
+  
+    getLogin(){
+      this.api.getLogin().subscribe(res=>{
+        this.adminLoginData=res;
+      })
+    }
+  
+    deleteLogin(row: any){
+  this.api.DeleteLogin(row.id).subscribe(res=>{
+    alert("Login Details Deleted Successfully!");
+    this.getLogin();
+  })
+    }
+  
+    onEdit(row:any){
+      this.showAdd=false;
+      this.showUpdate=true;
+      this.adminLoginObj.email=row.email;
+      this.formValue.controls['id'].setValue(row.id);
+      this.formValue.controls['username'].setValue(row.username);
+      this.formValue.controls['email'].setValue(row.email);
+      this.formValue.controls['password'].setValue(row.password);
+    }
+  
+    updateLogin(){
+      this.adminLoginObj.id=this.formValue.value.id;
+      this.adminLoginObj.username=this.formValue.value.username;
+      this.adminLoginObj.email=this.formValue.value.email;
+      this.adminLoginObj.password=this.formValue.value.password;
+  
+  
+      this.api.UpdateLogin(this.adminLoginObj,this.adminLoginObj.id).subscribe(res=>{
+        alert("Update Done Successfully!");
+        let ref=document.getElementById('cancel');
+        ref?.click();
+        this.formValue.reset();
+        this.getLogin();
+      })
+    }
+*/

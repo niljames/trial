@@ -1,0 +1,49 @@
+*{
+    color:white;
+}
+ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a{
+    height:12rem;
+    width:20rem;
+    border:1px solid black;
+    border-radius:1 rem;
+    margin:0.5rem;
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
+    color:red;
+}
+
+li a:hover{
+    opacity: 0.9;
+    cursor:pointer;
+}
+ 
+.content{
+    padding:.5rem 1rem;
+    position:relative;
+}
+
+.price{
+    position:absolute;
+    top:.5rem;
+    right:1rem;
+
+}
+
+.product-item-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+

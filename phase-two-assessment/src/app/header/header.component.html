@@ -1,0 +1,103 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" routerLink="/">
+      <img src="https://toppng.com/uploads/preview/fork-and-spoon-logo-11550711624r8glowvldj.png"
+        style="border-radius:50%;" alt="" width="30" height="24"> Kitchen Story</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="/">Home</a>
+        </li>
+        <form class="d-flex" id="search">
+          <input class="form-control me-2" autocomplete="off" type="search" placeholder="Search" aria-label="Search"
+            [(ngModel)]="searchTerm" name="submit">
+          <button class="btn btn-outline-success" type="submit" (click)="search()">Search</button>
+        </form>
+      </ul>
+      <p style="color:white; margin-top: 15px; margin-right:20%;">{{namechange}}</p>
+      <button type="button" class="btn btn-outline-info" style="margin-right: 5px;">
+        <div style="font-size: 10px;" class="badge bg-danger">{{cart.items.length}}</div><i class="fa fa-shopping-cart"
+          style="color:white;" routerLink="/cart-page">View Cart</i>
+      </button>
+
+      <button type="button" id="login" value="login" style="margin-right:5px;" class="btn btn-outline-warning"
+        data-bs-toggle="modal" data-bs-target="#loginmodal">Login</button>
+      <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" (click)="check()"
+        id="logout">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Modal-->
+<div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" formControlName="email" id="email" name="email" placeholder="email"
+              required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="password" name="password"
+              placeholder="Password" required />
+          </div>
+          <div class="modal-footer d-block">
+            <div class="signup-section">Not a member yet? <a data-bs-toggle="modal" data-bs-target="#signupmodal"
+                class="text-info" id="signup"> Sign Up</a>.</div>
+            <button type="submit" class="btn btn-warning float-end" (click)="CheckDetails()">Login</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup Modal-->
+<div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" formControlName="username" id="username" name="username"
+              placeholder="username" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" formControlName="email" id="email" name="email" placeholder="email"
+              required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="password" name="password"
+              placeholder="Password" required />
+          </div>
+          <div class="modal-footer d-block">
+            <button type="submit" class="btn btn-warning float-end" (click)="AddDetails()">Signup</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
